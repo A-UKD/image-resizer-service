@@ -57,7 +57,7 @@ export async function uploadImage(req, res) {
     const imageName = await imageService.uploadImage(file);
     if (!imageName) {
         // Якщо завантаження зображення не вдалося, повертаємо відповідь з помилкою
-        res.status(500).json({ message: 'Failed to upload image.' });
+        res.status(500).json({ message: 'Не вдалося завантажити зображення.' });
         return;
     }
     // Якщо зображення успішно завантажено, повертаємо відповідь з інформацією про зображення
